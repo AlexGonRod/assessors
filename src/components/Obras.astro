@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section
+	class="bg-white md:bg-red-400 text-black grid grid-cols-3 grid-rows-3 md:gap-x-0 gap-y-0"
+>
+	<div class="col-span-3 row-span-1 md:p-4 content-center text-center">
+		<h1 class="mb-4 text-2xl">RESIDENCIAL</h1>
+		<p>
+			¿Cómo imaginas tu casa? ¿Un piso con techos altos y terraza? ¿Una
+			casa con jardín y piscina? Esta es una selección de los hogares que
+			hemos construido.
+		</p>
+	</div>
+	<div
+		class="p-4 col-span-3 md:p-0 md:col-span-1 md:row-span-2 md:row-start-2"
+	>
+		<Image
+			loading="eager"
+			src="/images/obras1.webp"
+			alt="imagen del interior de una cocina nueva y reformada"
+			width="460"
+			height="150"
+			class="rounded-lg md:rounded-none"
+		/>
+	</div>
+	<div
+		class="p-4 col-span-3 md:p-0 md:col-span-1 md:row-span-2 md:row-start-2"
+	>
+		<Image
+			loading="eager"
+			src="/images/obras2.webp"
+			alt="imagen del interior de un comedor de oficina, amplio y moderno"
+			width="460"
+			height="150"
+			class="rounded-lg md:rounded-none"
+		/>
+	</div>
+	<div
+		class="p-4 col-span-3 md:p-0 md:col-span-1 md:row-span-2 md:row-start-2"
+	>
+		<Image
+			loading="eager"
+			src="/images/obras3.webp"
+			alt="imagen del interior de una tienda nueva y reformada"
+			width="460"
+			height="150"
+			class="rounded-lg md:rounded-none"
+		/>
+	</div>
+</section>

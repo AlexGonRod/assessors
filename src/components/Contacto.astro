@@ -1,0 +1,36 @@
+---
+import LeafMap from "@/components/LeafMap.astro";
+import Section from "@/components/ui/Section.astro";
+import { Image } from "astro:assets";
+---
+
+<Section
+bgColor="bg-white md:bg-red-400" textColor="text-black"
+>
+	<div class="grid grid-cols-1 grid-rows-1 gap-4">
+		<div >
+			<h2 class="my-7 text-2xl">CONTACTO</h2>
+			<!-- <LeafMap latitude={41.6102953} longitude={2.5192323} zoom={10} /> -->
+			<Image
+				src="/images/map.webp"
+				alt="mapa de ubicacion"
+				width={400}
+				height={160}
+				class="rounded-lg"
+			/>
+		</div>
+		<p>
+			Santa Anna, 44 <br />08290 Cerdanyola del Vallès, Barcelona
+		</p>
+		<ul>
+			<li>
+				<i class="icon-phone"></i>93 594 20 44
+			</li>
+			<li>
+				<i class="icon-time"></i> De Lunes a Jueves 8:00 - 18:00, Viernes de
+				8:00 - 16:00
+			</li>
+		</ul>
+	</div>
+
+</Section>

@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header class="bg-contrast text-black  p-4">
+	<nav class=" max-w-7xl mx-auto flex flex-row justify-around items-center">
+		<div class="inline-block">
+			<Image
+				src="/images/logo.webp"
+				alt="logo de la empresa"
+				width={200}
+				height={200}
+				class="inline-flex w-1xl"
+				loading="eager"
+			/>
+		</div>
+		<ul
+			class="hidden md:flex md:flex-row md:justify-between md:items-center md:grow-[0.5] text-white"
+		>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="/servicios/">Servicios</a></li>
+			<li><a href="/obras/">Obras</a></li>
+			<li><a href="/nosotros/">Sobre nosotros</a></li>
+			<li><a href="/contacto">Contacto</a></li>
+		</ul>
+	</nav>
+</header>

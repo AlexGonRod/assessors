@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Contacto from "@/components/Contacto.astro";
+import Nosotros from "@/components/Nosotros.astro";
+import Servicios from "@/components/Servicios.astro";
+import Obras from "@/components/Obras.astro";
+import Promociones from "@/components/Promociones.astro";
+import Info from "@/components/Info.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<div
+		class="md:max-[800px] mx-auto flex items-center justify-center container md:px-4"
+	>
+		<div class="md:grid md:grid-cols-6 md:grid-rows-8">
+			<div class="md:row-span-3 md:col-span-4"><Obras /></div>
+			<div class=" md:col-span-2 md:row-span-4 md:col-start-5">
+				<Promociones />
+			</div>
+			<div class="md:col-span-4 md:row-span-2 md:row-start-4">
+				<Info />
+			</div>
+			<div
+				class="md:col-span-2 md:row-span-3 md:col-start-1 md:row-start-6"
+			>
+				<Nosotros />
+			</div>
+			<div
+				class="md:col-span-2 md:row-span-3 md:col-start-3 md:row-start-6"
+			>
+				<Servicios />
+			</div>
+			<div
+				class=" md:col-span-2 md:row-span-4 md:col-start-5 md:row-start-5"
+			>
+				<Contacto />
+			</div>
+		</div>
+	</div>
 </Layout>

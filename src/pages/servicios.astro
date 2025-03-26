@@ -1,0 +1,93 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro";
+import Article from "@/components/ui/Article.astro";
+
+const articles = [
+	{
+		title: "Fachadas",
+		description:
+			"Somos expertos en la rehabilitación y reforma de fachadas. Nos aseguramos de que tu edificio tenga una apariencia estética y funcional impecable.",
+		src: "/images/fachadas.webp",
+		alt: "fachada de edificio",
+	},
+	{
+		title: "Vestibulos",
+		description:
+			"El vestíbulo de tu edificio es la carta de presentación de tu comunidad de vecinos. En Assessors tecnics te presentamos soluciones integrales para su reforma y rehabilitación, adaptándonos a tus necesidades y presupuesto.",
+		src: "/images/vestibulo.webp",
+		alt: "Imagen de un vestibulo",
+	},
+	{
+		title: "Patios de luces",
+		description:
+			"El patio de luces es un elemento clave en la estructura de tu edificio, pero muchas veces queda desaprovechado. Tenemos soluciones personalizadas de rehabilitación y reforma de patios de luces.",
+		src: "/images/patio_de_luces.webp",
+		alt: "patio de luces",
+	},
+	{
+		title: "Refuerzos estructurales",
+		description:
+			"Los refuerzos estructurales son fundamentales para la seguridad de tu edificio. Te ofrecemos soluciones integrales y personalizadas para la realización de refuerzos estructurales, garantizando la estabilidad y seguridad del edificio.",
+		src: "/images/refuerzo_estructural.webp",
+		alt: "imagen de refuerzo de acero",
+	},
+	{
+		title: "Lampisteria e instalaciones",
+		description:
+			"Contamos con un equipo de profesionales altamente capacitados para ofrecerte servicios de lampistería e instalaciones eléctricas y de fontanería. Garantizamos la eficiencia y seguridad de tus instalaciones.",
+		src: "/images/lampisteria_instalaciones.webp",
+		alt: "imagen de un cuadro electrico",
+	},
+	{
+		title: "Impermeabilizacion de terrazas",
+		description:
+			"Las filtraciones de agua pueden ser un problema serio en tu hogar. En Assessors tecnics te ofrecemos soluciones personalizadas de impermeabilización de terrazas, para que puedas disfrutar de tu espacio exterior sin preocupaciones.",
+		src: "/images/impermeabilizacion.webp",
+		alt: "imagen de un tejado impermeabilizado",
+	},
+	{
+		title: "Reforma integral de pisos y locales",
+		description:
+			"En Assessors tecnics nos enfocamos en soluciones personalizadas de reforma integral de pisos y locales, adaptadas a las necesidades y presupuesto de cada cliente, para cumplir con las expectativas.",
+		src: "/images/reforma_integral.webp",
+		alt: "imagen de un piso en reformas",
+	},
+	{
+		title: "Partes de urgencia y reparaciones puntuales",
+		description:
+			"Estamos disponibles para atender partes de urgencia y reparaciones puntuales. Contamos con un equipo de profesionales altamente capacitados para actuar de manera rápida y eficiente.",
+		src: "/images/reparaciones.webp",
+		alt: "imagen de una persona haciendo una reparacion",
+	},
+];
+---
+
+<LayoutPages
+	title="Servicios"
+	description="Servicios de rehabilitación y reformas integrales para edificios, locales y viviendas."
+>
+	<h1
+		class="text-blue-400 text-right border-blue-400 border-b font-bold text-3xl"
+	>
+		La mejora de tus espacios está en nuestras manos
+	</h1>
+	<h2 class="text-2xl font-semibold my-10 text-center">
+		Assessors tecnics ofrece servicios de rehabilitación y reformas
+		integrales para edificios, locales y viviendas. Con una amplia
+		experiencia en el sector, proporcionamos soluciones personalizadas y de
+		alta calidad, adaptadas a las necesidades de cada cliente.
+	</h2>
+	<div class="grid md:grid-cols-2 gap-y-8 md:gap-x-4">
+		{
+			articles.map((e) => (
+				<Article
+					title={e.title}
+					description={e.description}
+					src={e.src}
+					alt={e.alt}
+					loading={(articles[0] && articles[1]) ?? "eager"}
+				/>
+			))
+		}
+	</div>
+</LayoutPages>

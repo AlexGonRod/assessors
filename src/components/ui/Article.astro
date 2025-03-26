@@ -1,0 +1,23 @@
+---
+const { title, description, src, alt, loading } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<article class="grid md:grid-cols-2 gap-x-4">
+	<Image
+		src={src}
+		alt={alt}
+		width={300}
+		height={200}
+		class="w-full"
+		loading={loading || "lazy"}
+	/>
+	<main>
+		<h1 class="article text-blue-400' font-semibold my-4 md:mb-2 md:mt-0">
+			{title}
+		</h1>
+		<p class="text-pretty">
+			{description}
+		</p>
+	</main>
+</article>
