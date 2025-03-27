@@ -1,8 +1,9 @@
 ---
-const {bgColor, textColor} = Astro.props
+const { bgColor, textColor, justify = "center" } = Astro.props;
 ---
+
 <section
-	class=`${bgColor} ${textColor} flex flex-col items-center justify-center h-full  text-center md:py-0 py-10 px-4`
+	class=`${bgColor} ${textColor} flex flex-col items-center justify-center h-full  text-${justify} md:py-0 py-10 px-4`
 >
 	<slot />
 </section>
