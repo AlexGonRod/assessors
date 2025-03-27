@@ -2,14 +2,13 @@
 import LeafMap from "@/components/LeafMap.astro";
 import Section from "@/components/ui/Section.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
-<Section
-bgColor="bg-white md:bg-red-400" textColor="text-black"
->
+<Section bgColor="bg-contrast" textColor="text-white">
 	<div class="grid grid-cols-1 grid-rows-1 gap-4">
-		<div >
-			<h2 class="my-7 text-2xl">CONTACTO</h2>
+		<div>
+			<h2 class=" text-2xl">CONTACTO</h2>
 			<!-- <LeafMap latitude={41.6102953} longitude={2.5192323} zoom={10} /> -->
 			<Image
 				src="/images/map.webp"
@@ -19,18 +18,28 @@ bgColor="bg-white md:bg-red-400" textColor="text-black"
 				class="rounded-lg"
 			/>
 		</div>
-		<p>
-			Santa Anna, 44 <br />08290 Cerdanyola del Vallès, Barcelona
-		</p>
-		<ul>
-			<li>
-				<i class="icon-phone"></i>93 594 20 44
-			</li>
-			<li>
-				<i class="icon-time"></i> De Lunes a Jueves 8:00 - 18:00, Viernes de
-				8:00 - 16:00
-			</li>
-		</ul>
+		<div class="flex flex-col">
+			<div class="flex flex-row items-center">
+				<Icon
+					name="mdi:google-maps"
+					class="text-primary-600 mr-3 text-xl"
+				/>
+				<span>Rambla Sant Martí, 46, Arenys de munt</span>
+			</div>
+			<div class="flex flex-row items-center">
+				<Icon
+					name="material-symbols-light:mail-outline"
+					class="text-primary-600 mr-3 text-xl"
+				/>
+				<span>elrostidorarenysdemunt@gmail.com</span>
+			</div>
+			<div class="flex flex-row items-center">
+				<Icon
+					name="mdi-light:phone"
+					class="text-primary-600 mr-3 text-xl"
+				/>
+				<span>93 793 71 07</span>
+			</div>
+		</div>
 	</div>
-
 </Section>
