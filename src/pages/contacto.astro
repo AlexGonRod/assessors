@@ -1,6 +1,7 @@
 ---
 import LayoutPages from "@/layouts/LayoutPages.astro";
 import Form from "@/components/ui/Form.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <LayoutPages
@@ -8,7 +9,7 @@ import Form from "@/components/ui/Form.astro";
 	description="Pagina de contacto con nosotros"
 >
 	<h1
-		class="text-blue-400 text-right border-blue-400 border-b font-bold text-3xl"
+		class="text-primary-500 text-right border-primary-500 border-b font-bold text-3xl"
 	>
 		Descubre como trabajamos
 	</h1>
@@ -17,5 +18,28 @@ import Form from "@/components/ui/Form.astro";
 		proyecto? ¡Contáctanos! Estaremos encantados de atenderte y resolver tus
 		dudas.
 	</h2>
+	<div class="flex flex-col">
+		<div class="flex flex-row">
+			<Icon
+				name="mdi:google-maps"
+				class="text-primary-600 mr-3 text-xl"
+			/>
+			<span>Rambla Sant Martí, 46, Arenys de munt</span>
+		</div>
+		<div class="flex flex-row">
+			<Icon
+				name="material-symbols-light:mail-outline"
+				class="text-primary-600 mr-3 text-xl"
+			/>
+			<span>elrostidorarenysdemunt@gmail.com</span>
+		</div>
+		<div class="flex flex-row">
+			<Icon
+				name="mdi-light:phone"
+				class="text-primary-600 mr-3 text-xl"
+			/>
+			<span>93 793 71 07</span>
+		</div>
+	</div>
 	<Form />
 </LayoutPages>

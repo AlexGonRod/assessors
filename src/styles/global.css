@@ -3,6 +3,8 @@
 @theme {
 	--font-heading: 'Montserrat', sans-serif;
 	--font-body: 'Karla', sans-serif;
+	--color-primary-500: #EB8834;
+	--color-primary-600: #e67617;
 	--color-contrast: #323335;
 }
 
