@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <LayoutPages
-	title="Contacta con Assessors tecnics"
+	title="Contacta con ASSESSORS TECNICS"
 	description="Pagina de contacto con nosotros"
 >
 	<h1
@@ -13,12 +13,12 @@ import { Icon } from "astro-icon/components";
 	>
 		Descubre como trabajamos
 	</h1>
-	<h2 class="text-1xl font-semibold my-10 text-center">
+	<h2 class="text-1xl  md:text-2xl font-semibold my-10 text-center">
 		¿Quieres saber más sobre nuestros servicios o necesitas ayuda para tu
 		proyecto? ¡Contáctanos! Estaremos encantados de atenderte y resolver tus
 		dudas.
 	</h2>
-	<div class="flex flex-col">
+	<div class="flex flex-col my-7">
 		<div class="flex flex-row">
 			<Icon
 				name="mdi:google-maps"
@@ -31,14 +31,17 @@ import { Icon } from "astro-icon/components";
 				name="material-symbols-light:mail-outline"
 				class="text-primary-600 mr-3 text-xl"
 			/>
-			<span>elrostidorarenysdemunt@gmail.com</span>
+			<a
+				href="mailto:elrostidorarenysdemunt@gmail.com?Subject='Interesado%20en%20contratar"
+				>elrostidorarenysdemunt@gmail.com</a
+			>
 		</div>
 		<div class="flex flex-row">
 			<Icon
 				name="mdi-light:phone"
 				class="text-primary-600 mr-3 text-xl"
 			/>
-			<span>93 793 71 07</span>
+			<a href="tel:+34938589096">93 793 71 07</a>
 		</div>
 	</div>
 	<Form />

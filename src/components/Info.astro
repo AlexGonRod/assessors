@@ -4,12 +4,14 @@ import { Image } from "astro:assets";
 ---
 
 <Section bgColor="bg-gray-200" textColor="text-black">
-	<h2 class="mb-7 md:my-4 text-2xl font-semibold">CATEGORIAS DE OBRAS</h2>
+	<h2 class="mb-7 md:my-4 text-2xl ">CATEGORIAS DE OBRAS</h2>
 
 	<div
 		class="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:grid-rows-1 md:gap-x-4 mb-4"
 	>
-		<div class="bg-gray-100  p-3 rounded-lg shadow-2xl hover:bg-primary-500">
+		<div
+			class="bg-gray-100 p-3 rounded-lg shadow-2xl hover:scale-105 transform ease-in-out duration-300"
+		>
 			<Image
 				src="/images/icon1.png"
 				alt="Untitled design"
@@ -18,15 +20,20 @@ import { Image } from "astro:assets";
 				height={50}
 			/>
 			<div class="text-left">
-				<h3 class="text-2xl font-semibold">
-					<a href="/servicios/" tabindex="0">Estilo de proyectos</a>
-				</h3><p>
-					Transformar espacios existentes en ambientes funcionales,
-					adaptados a las necesidades de los clientes.
-				</p>
+				<a href="/servicios/" tabindex="0">
+					<h3 class="text-1xl font-semibold">
+						Estilo de proyectos
+					</h3><p>
+						Transformar espacios existentes en ambientes
+						funcionales, adaptados a las necesidades de los
+						clientes.
+					</p>
+				</a>
 			</div>
 		</div>
-		<div class="bg-gray-100  p-3 rounded-lg shadow-2xl hover:bg-primary-500">
+		<div
+			class="bg-gray-100 p-3 rounded-lg shadow-2xl hover:scale-105 transform ease-in-out duration-300"
+		>
 			<Image
 				src="/images/icon2.png"
 				alt="Untitled design"
@@ -35,15 +42,19 @@ import { Image } from "astro:assets";
 				height={50}
 			/>
 			<div class="text-left">
-				<h3 class="text-2xl font-semibold">
-					<a href="/servicios/" tabindex="0">Diseño de Interiores</a>
-				</h3><p>
-					Optimizar los espacios al aire libre, creando entornos
-					armoniosos, atractivos y completamente funcionales..
-				</p>
+				<a href="/servicios/" tabindex="0">
+					<h3 class="text-1xl font-semibold">
+						Diseño de Interiores
+					</h3><p>
+						Optimizar los espacios al aire libre, creando entornos
+						armoniosos, atractivos y completamente funcionales..
+					</p>
+				</a>
 			</div>
 		</div>
-		<div class="bg-gray-100  p-3 rounded-lg shadow-2xl hover:bg-primary-500">
+		<div
+			class="bg-gray-100 p-3 rounded-lg shadow-2xl hover:scale-105 transform ease-in-out duration-300"
+		>
 			<Image
 				src="/images/icon3.png"
 				alt="Untitled design"
@@ -52,12 +63,13 @@ import { Image } from "astro:assets";
 				height={50}
 			/>
 			<div class="text-left">
-				<h3 class="text-2xl font-semibold">
-					<a href="/servicios/" tabindex="0">Diseño de Exteriores</a>
-				</h3><p>
-					Optimizar los espacios al aire libre, creando entornos
-					armoniosos, atractivos y completamente funcionales.
-				</p>
+				<a href="/servicios/" tabindex="0">
+					<h3 class="text-1xl font-semibold">Diseño de Exteriores</h3>
+					<p>
+						Optimizar los espacios al aire libre, creando entornos
+						armoniosos, atractivos y completamente funcionales.
+					</p>
+				</a>
 			</div>
 		</div>
 	</div>
