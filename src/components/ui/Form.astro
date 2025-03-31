@@ -1,12 +1,44 @@
 ---
 const { color } = Astro.props;
+
+export const prerender = false;
+
+const response = { error: "", message: "" };
+
+if (Astro.request.method === "POST") {
+	const data = await Astro.request.formData();
+	const name = data.get("name");
+	console.log("name: ", name);
+	const email = data.get("email");
+	console.log("email: ", email);
+	const about = data.get("about");
+	console.log("about: ", about);
+	const asunto = data.get("asunto");
+	console.log("asunto: ", asunto);
+
+	if (!name || !email || !about || !asunto) {
+		response.error = "Por favor, rellene todos los datos del formulario.";
+	} else {
+		response.message =
+			"Gracias por su mensaje, nos pondremos en contacto con usted lo antes posible.";
+	}
+}
+console.log(JSON.stringify(response));
 ---
 
-<form class="md:px-4 w-full">
-	<div class=" border-gray-900/10 ">
+<form class="md:px-4 w-full" method="POST">
+	<div class="border-gray-900/10">
 		<h1 class=`text-2xl text-${color}`>DEJANOS TUS DUDAS</h1>
+		{response.message && <p>{JSON.stringify(response.message)}</p>}
+		{
+			response.error && (
+				<p class="text-red-700">{JSON.stringify(response.error)}</p>
+			)
+		}
 
-		<div class="mt-10 grid grid-cols-1 gap-x-6 md:gap-x-4 gap-y-8 sm:grid-cols-6">
+		<div
+			class="mt-10 grid grid-cols-1 gap-x-6 md:gap-x-4 gap-y-8 sm:grid-cols-6"
+		>
 			<div class="sm:col-span-3">
 				<label
 					for="name"
@@ -15,7 +47,6 @@ const { color } = Astro.props;
 				>
 				<div class="mt-2">
 					<input
-						required
 						type="text"
 						placeholder="Nombre"
 						name="name"
@@ -34,7 +65,6 @@ const { color } = Astro.props;
 				>
 				<div class="mt-2">
 					<input
-						required
 						type="email"
 						placeholder="Email"
 						name="email"
@@ -53,7 +83,6 @@ const { color } = Astro.props;
 				>
 				<div class="mt-2">
 					<input
-						required
 						type="text"
 						placeholder="Asunto"
 						name="asunto"

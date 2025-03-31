@@ -3,6 +3,8 @@ import LeafMap from "@/components/LeafMap.astro";
 import Section from "@/components/ui/Section.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
 ---
 
 <Section bgColor="bg-contrast" textColor="text-white" justify="left">
@@ -23,9 +25,7 @@ import { Icon } from "astro-icon/components";
 				<div class="inline-block mr-4">
 					<Icon name="mdi:google-maps" class="text-primary-600" />
 				</div>
-				<span class="text-base"
-					>Rambla Sant Martí, 46, Arenys de munt</span
-				>
+				<span class="text-base">{address}</span>
 			</div>
 			<div class="flex flex-row items-center justify-start">
 				<div class="inline-block mr-4">
@@ -36,14 +36,14 @@ import { Icon } from "astro-icon/components";
 				</div>
 				<a
 					href="mailto:elrostidorarenysdemunt@gmail.com?Subject='Interesado%20en%20contratar"
-					>elrostidorarenysdemunt@gmail.com</a
+					>{mail}</a
 				>
 			</div>
 			<div class="flex flex-row items-center justify-start">
 				<div class="inline-block mr-4">
 					<Icon name="mdi-light:phone" class="text-primary-600" />
 				</div>
-				<a href="tel:+34938589096">93 793 71 07</a>
+				<a href=`tel:${tel}`>{tel}</a>
 			</div>
 		</div>
 	</div>

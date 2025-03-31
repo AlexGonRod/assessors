@@ -2,10 +2,14 @@
 import LayoutPages from "@/layouts/LayoutPages.astro";
 import Form from "@/components/ui/Form.astro";
 import { Icon } from "astro-icon/components";
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
+export const prerender = false;
+
 ---
 
 <LayoutPages
-	title="Contacta con ASSESSORS TECNICS"
+	title=`Contacta con ${name}`
 	description="Pagina de contacto con nosotros"
 >
 	<h1
@@ -13,7 +17,7 @@ import { Icon } from "astro-icon/components";
 	>
 		Descubre como trabajamos
 	</h1>
-	<h2 class="text-1xl  md:text-2xl font-semibold my-10 text-center">
+	<h2 class="text-1xl md:text-2xl font-semibold my-10 text-center">
 		¿Quieres saber más sobre nuestros servicios o necesitas ayuda para tu
 		proyecto? ¡Contáctanos! Estaremos encantados de atenderte y resolver tus
 		dudas.
@@ -24,16 +28,15 @@ import { Icon } from "astro-icon/components";
 				name="mdi:google-maps"
 				class="text-primary-600 mr-3 text-xl"
 			/>
-			<span>Rambla Sant Martí, 46, Arenys de munt</span>
+			<span>{address}</span>
 		</div>
 		<div class="flex flex-row">
 			<Icon
 				name="material-symbols-light:mail-outline"
 				class="text-primary-600 mr-3 text-xl"
 			/>
-			<a
-				href="mailto:elrostidorarenysdemunt@gmail.com?Subject='Interesado%20en%20contratar"
-				>elrostidorarenysdemunt@gmail.com</a
+			<a href=`mailto:${mail}?Subject='Interesado%20en%20contratar`
+				>{mail}</a
 			>
 		</div>
 		<div class="flex flex-row">
@@ -41,7 +44,7 @@ import { Icon } from "astro-icon/components";
 				name="mdi-light:phone"
 				class="text-primary-600 mr-3 text-xl"
 			/>
-			<a href="tel:+34938589096">93 793 71 07</a>
+			<a href=`tel:${tel}`>{tel}</a>
 		</div>
 	</div>
 	<Form />
