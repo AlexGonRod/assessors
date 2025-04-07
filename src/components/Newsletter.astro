@@ -1,6 +1,6 @@
 ---
 import Section from "@/components/ui/Section.astro";
-import Form from "@/components/ui/Form.astro";
+import Form from "@/components/ui/Form.svelte";
 ---
 
 <Section
@@ -8,5 +8,5 @@ import Form from "@/components/ui/Form.astro";
 	textColor="text-white"
 	justify="left"
 >
-	<Form color="white" />
+	<Form client:load color="white" />
 </Section>

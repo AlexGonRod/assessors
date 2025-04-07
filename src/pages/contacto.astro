@@ -1,6 +1,6 @@
 ---
 import LayoutPages from "@/layouts/LayoutPages.astro";
-import Form from "@/components/ui/Form.astro";
+import Form from "@/components/ui/Form.svelte";
 import { Icon } from "astro-icon/components";
 import metadata from "../const/meta.json";
 const { mail, address, tel, name } = metadata;
@@ -47,5 +47,5 @@ export const prerender = false;
 			<a href=`tel:${tel}`>{tel}</a>
 		</div>
 	</div>
-	<Form />
+	<Form  client:load />
 </LayoutPages>
