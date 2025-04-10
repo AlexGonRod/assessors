@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/karla";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import "@fontsource-variable/karla";
 			content="ASSESSORS TECNICS es una empresa dedicada tanto a la rehabilitacion como a la obra nueva. Mas de 10 años nos avalan, con proyectos y clientes satisfechos."
 		/>
 		<title>ASSESSORS TECNICS</title>
+		<ClientRouter />
 	</head>
 	<body class="">
 		<Header />

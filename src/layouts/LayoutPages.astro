@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import PageSection from "@/components/ui/PageSection.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/karla";
+import { ClientRouter } from "astro:transitions";
 const { title, description } = Astro.props;
 ---
 
@@ -16,6 +17,7 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body class="md:mx-auto overflow-x-hidden">
 		<Header />
