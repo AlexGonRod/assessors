@@ -1,5 +1,8 @@
 ---
 import LayoutPages from "@/layouts/LayoutPages.astro";
+
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
 ---
 
 <LayoutPages
@@ -13,30 +16,29 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 	</h1>
 	<h2 class="text-2xl font-semibold my-10 text-center">
 		Para cualquier consulta legal, contáctenos por <a
-			href="mailto:elrostidorarenysdemunt@gmail.com?Subject=Interesado%20en%20contratar"
-			>elrostidorarenysdemunt@gmail.com</a
+			href=`mailto:${mail}?Subject='Interesado%20en%20contratar'`
+			>{mail}</a
 		>
 	</h2>
 	<div class="mb-7">
 		<p>
 			El presente Aviso Legal regula el uso del servicio del portal de
-			Internet con dirección www.assessorstecnics.com, cuyo responsable a
-			efectos identificativos es:
+			Internet con dirección www.arquitectesassessors.com, cuyo
+			responsable a efectos identificativos es:
 		</p>
 		<ul class="list-disc px-4">
-			<li>Responsable: ASSESSORS TECNICS</li>
-			<li>NIF: B09680885</li>
-			<li>Dirección: CARRER BELLSOLAR, 85, ESC 1 – LOCAL 2</li>
-			<li>Teléfono: 690381591</li>
-			<li>MAIL: elrostidorarenysdemunt@gmail.com</li>
+			<li>Responsable: {name}</li>
+			<li>Dirección:{address}</li>
+			<li>Teléfono: {tel}</li>
+			<li>MAIL: {mail}</li>
 		</ul>
 	</div>
 	<div class="mb-7">
 		<h3>LEGISLACIÓN</h3>
 		<p>
-			Con carácter general las relaciones entre ASSESSORS TECNICS con los
-			Usuarios de sus servicios telemáticos, presentes en la web, se
-			encuentran sometidas a la legislación y jurisdicción españolas.
+			Con carácter general las relaciones entre {name} con los Usuarios de
+			sus servicios telemáticos, presentes en la web, se encuentran sometidas
+			a la legislación y jurisdicción españolas.
 		</p>
 		<p>
 			Las partes renuncian expresamente al fuero que les pudiera
@@ -51,7 +53,7 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 		<p>
 			El Usuario queda informado, y acepta, que el acceso a la presente
 			web no supone, en modo alguno, el inicio de una relación comercial
-			con ASSESSORS TECNICS.
+			con {name} .
 		</p>
 		<p>
 			El titular del web no se identifica con las opiniones vertidas en el

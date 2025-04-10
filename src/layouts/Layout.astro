@@ -5,6 +5,9 @@ import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/karla";
 import { ClientRouter } from "astro:transitions";
+
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
 ---
 
 <!doctype html>
@@ -15,9 +18,9 @@ import { ClientRouter } from "astro:transitions";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta
 			name="description"
-			content="ASSESSORS TECNICS es una empresa dedicada tanto a la rehabilitacion como a la obra nueva. Mas de 10 años nos avalan, con proyectos y clientes satisfechos."
+			content=`${name}  es una empresa dedicada tanto a la rehabilitacion como a la obra nueva. Mas de 10 años nos avalan, con proyectos y clientes satisfechos.`$
 		/>
-		<title>ASSESSORS TECNICS</title>
+		<title>{name}</title>
 		<ClientRouter />
 	</head>
 	<body class="">

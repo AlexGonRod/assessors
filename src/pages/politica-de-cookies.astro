@@ -1,5 +1,8 @@
 ---
 import LayoutPages from "@/layouts/LayoutPages.astro";
+
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
 ---
 
 <LayoutPages
@@ -13,8 +16,8 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 	</h1>
 	<h2 class="text-2xl font-semibold my-10 text-center">
 		Para cualquier consulta legal, contáctenos por <a
-			href="mailto:elrostidorarenysdemunt@gmail.com?Subject=Interesado%20en%20contratar"
-			>elrostidorarenysdemunt@gmail.com</a
+			href=`mailto:${mail}?Subject='Interesado%20en%20contratar'`
+			>{mail}</a
 		>
 	</h2>
 	<div class="mb-7">
@@ -54,8 +57,7 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 			La entidad responsable de la recogida, procesamiento y utilización
 			de tus datos personales, en el sentido establecido por la Ley de
 			Protección de Datos personales, es la página
-			www.assessorstecnics.com, propiedad de ASSESSORS TECNICS, y
-			dirección en Carrer Bellsolar, 85, Esc 1 – Local 2.
+			www.arquitectesassessors.com, propiedad de {name} , y dirección en {address}.
 		</p>
 	</div>
 	<div class="mb-7">
@@ -90,8 +92,8 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 			cookies de sesión o permanentes. Las que expiran cuando el usuario
 			cierra el navegador. Las que expiran en función de cuando se cumpla
 			el objetivo para el que sirven (por ejemplo, para que el usuario se
-			mantenga identificado en los servicios de ASSESSORS TECNICS o bien
-			cuando se borran manualmente.
+			mantenga identificado en los servicios de {name} o bien cuando se borran
+			manualmente.
 		</p>
 		<h4>Cookies de rendimiento</h4>
 		<p>
@@ -146,9 +148,9 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 			Cada vez que un usuario visita un servicio, una herramienta de un
 			proveedor externo genera una cookie analítica en el ordenador del
 			usuario. Esta cookie que sólo se genera en la visita, servirá en
-			próximas visitas a los servicios de KIBAN ARQUITECTURE AND DESIGNS,
-			S.L., para identificar de forma anónima al visitante. Los objetivos
-			principales que se persiguen son:
+			próximas visitas a los servicios de {name}, para identificar de
+			forma anónima al visitante. Los objetivos principales que se
+			persiguen son:
 		</p>
 		<ul class="list-disc px-4">
 			<li>
@@ -165,10 +167,10 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 		</ul>
 		<p>
 			Importante: Salvo que el usuario decida registrarse en un servicio
-			ASSESSORS TECNICS, la cookie nunca irá asociada a ningún dato de
-			carácter personal que pueda identificarle. Dichas cookies sólo serán
-			utilizadas con propósitos estadísticos que ayuden a la optimización
-			de la experiencia de los usuarios en el sitio.
+			{name} , la cookie nunca irá asociada a ningún dato de carácter personal
+			que pueda identificarle. Dichas cookies sólo serán utilizadas con propósitos
+			estadísticos que ayuden a la optimización de la experiencia de los usuarios
+			en el sitio.
 		</p>
 		<h4>Cookies de publicidad</h4>
 		<p>
@@ -185,19 +187,18 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 			Cada vez que un usuario visita un servicio, una herramienta de un
 			proveedor externo genera una cookie analítica en el ordenador del
 			usuario. Esta cookie que sólo se genera en la visita, servirá en
-			próximas visitas a los servicios de KIBAN ARQUITECTURE AND DESIGNS,
-			S.L., para identificar de forma anónima al visitante. Los objetivos
-			principales que se persiguen son:
+			próximas visitas a los servicios de {name}, para identificar de
+			forma anónima al visitante. Los objetivos principales que se
+			persiguen son:
 		</p>
 		<h4>Cookies publicitarias de terceros</h4>
 		<p>
-			Además de la publicidad gestionada por las webs KIBAN ARQUITECTURE
-			AND DESIGNS, S.L. en sus servicios, las webs de KIBAN ARQUITECTURE
-			AND DESIGNS, S.L. ofrecen a sus anunciantes la opción de servir
-			anuncios a través de terceros (“Ad- Servers”). De este modo, estos
-			terceros pueden almacenar cookies enviadas desde los servicios de
-			ASSESSORS TECNICS procedentes de los navegadores de los usuarios,
-			así como acceder a los datos que en ellas se guardan.
+			Además de la publicidad gestionada por las webs {name} en sus servicios, las webs de {name}
+			ofrecen a sus anunciantes la opción de servir anuncios a través de terceros
+			(“Ad- Servers”). De este modo, estos terceros pueden almacenar cookies
+			enviadas desde los servicios de {name} procedentes de
+			los navegadores de los usuarios, así como acceder a los datos que en
+			ellas se guardan.
 		</p>
 	</div>
 	<div class="mb-7">

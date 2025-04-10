@@ -2,6 +2,9 @@
 import LayoutPages from "@/layouts/LayoutPages.astro";
 import Article from "@/components/ui/Article.astro";
 
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
+
 const articles = [
 	{
 		title: "Fachadas",
@@ -13,7 +16,7 @@ const articles = [
 	{
 		title: "Vestibulos",
 		description:
-			"El vestíbulo de tu edificio es la carta de presentación de tu comunidad de vecinos. En ASSESSORS TECNICS te presentamos soluciones integrales para su reforma y rehabilitación, adaptándonos a tus necesidades y presupuesto.",
+			`El vestíbulo de tu edificio es la carta de presentación de tu comunidad de vecinos. En ${name}  te presentamos soluciones integrales para su reforma y rehabilitación, adaptándonos a tus necesidades y presupuesto.`,
 		src: "/images/vestibulo.webp",
 		alt: "Imagen de un vestibulo",
 	},
@@ -41,14 +44,14 @@ const articles = [
 	{
 		title: "Impermeabilizacion de terrazas",
 		description:
-			"Las filtraciones de agua pueden ser un problema serio en tu hogar. En ASSESSORS TECNICS te ofrecemos soluciones personalizadas de impermeabilización de terrazas, para que puedas disfrutar de tu espacio exterior sin preocupaciones.",
+			`Las filtraciones de agua pueden ser un problema serio en tu hogar. En ${name}  te ofrecemos soluciones personalizadas de impermeabilización de terrazas, para que puedas disfrutar de tu espacio exterior sin preocupaciones.`,
 		src: "/images/impermeabilizacion.webp",
 		alt: "imagen de un tejado impermeabilizado",
 	},
 	{
 		title: "Reforma integral de pisos y locales",
 		description:
-			"En ASSESSORS TECNICS nos enfocamos en soluciones personalizadas de reforma integral de pisos y locales, adaptadas a las necesidades y presupuesto de cada cliente, para cumplir con las expectativas.",
+			`En ${name}  nos enfocamos en soluciones personalizadas de reforma integral de pisos y locales, adaptadas a las necesidades y presupuesto de cada cliente, para cumplir con las expectativas.`,
 		src: "/images/reforma_integral.webp",
 		alt: "imagen de un piso en reformas",
 	},
@@ -72,10 +75,10 @@ const articles = [
 		La mejora de tus espacios está en nuestras manos
 	</h1>
 	<h2 class="text-1xl md:text-2xl font-semibold my-10 text-center">
-		ASSESSORS TECNICS ofrece servicios de rehabilitación y reformas
-		integrales para edificios, locales y viviendas. Nos especializamos en
-		transformar espacios en entornos funcionales, estéticos y modernos,
-		adaptándonos a las necesidades específicas de cada cliente.
+		{name} ofrece servicios de rehabilitación y reformas integrales para edificios,
+		locales y viviendas. Nos especializamos en transformar espacios en entornos
+		funcionales, estéticos y modernos, adaptándonos a las necesidades específicas
+		de cada cliente.
 	</h2>
 	<div class="grid md:grid-cols-2 gap-y-8 md:gap-x-4">
 		{

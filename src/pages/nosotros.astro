@@ -1,26 +1,28 @@
 ---
 import LayoutPages from "@/layouts/LayoutPages.astro";
+
+import metadata from "../const/meta.json";
+const { mail, address, tel, name } = metadata;
 ---
 
-<LayoutPages title="Nosotros" description="Conoce más sobre ASSESSORS TECNICS">
+<LayoutPages title="Nosotros" description=`Conoce más sobre ${name} `>
 	<h1
 		class="text-primary-500 text-right border-primary-500 border-b font-bold text-3xl"
 	>
-		ASSESSORS TECNICS, expertos en rehabilitacion y reformas
+		{name} , expertos en rehabilitacion y reformas
 	</h1>
 	<h2 class="text-3xl font-semibold my-10 text-center">
 		Creemos en lo que hacemos
 	</h2>
 	<p class="my-4 text-pretty">
-		<strong>ASSESSORS TECNICS </strong>es una empresa especializada en<strong
-		>
+		<strong>{name} </strong>es una empresa especializada en<strong>
 			rehabilitación de edificios y reformas.</strong
 		> Desde entonces, nuestra empresa ha evolucionado y se ha consolidado como
 		un referente en el sector de la construcción, gracias a nuestro compromiso
 		con la excelencia y la calidad en cada uno de los proyectos que emprendemos.
 	</p>
 	<p class="my-4 text-pretty">
-		En ASSESSORS TECNICS contamos con un equipo de
+		En {name} contamos con un equipo de
 		<strong>profesionales altamente cualificados y experimentados</strong>,
 		que nos permite abordar cualquier tipo de proyecto, desde pequeñas
 		reformas hasta la ejecución de grandes obras. Nuestro objetivo es
@@ -57,14 +59,14 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 			>profesionales en nuestros servicios de pladur,</strong
 		> que es una solución <strong>versátil y moderna </strong> que nos permite
 		transformar espacios con <strong>rapidez y eficiencia. </strong>En
-		ASSESSORS TECNICS somos especialistas en la instalación de sistemas de
-		pladur tanto en viviendas como en proyectos comerciales. Nos adaptamos a
-		cada proyecto para ofrecer <strong>resultados funcionales</strong>,
-		estéticos y con propiedades adicionales como <strong
+		{name} somos especialistas en la instalación de sistemas de pladur tanto
+		en viviendas como en proyectos comerciales. Nos adaptamos a cada proyecto
+		para ofrecer <strong>resultados funcionales</strong>, estéticos y con
+		propiedades adicionales como <strong
 			>aislamiento térmico y acústico.
 		</strong>
 		<p class="my-4 text-pretty">
-			En definitiva, en ASSESSORS TECNICS trabajamos con
+			En definitiva, en {name} trabajamos con
 			<strong>pasión y dedicación</strong>
 			para satisfacer las necesidades de nuestros clientes, y convertir sus
 			proyectos en realidades. Si buscas una empresa de confianza para llevar
