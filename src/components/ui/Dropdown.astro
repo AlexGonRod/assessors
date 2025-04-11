@@ -1,0 +1,71 @@
+<button
+	id="dropdownDefaultButton"
+	data-dropdown-toggle="dropdown"
+	type="button"
+	id="open-menu-button"
+	data-dropdown-offset-skidding="-50"
+	class="md:hidden -m-2.5 inline-flex cursor-pointer items-center justify-center rounded-md p-2.5 text-white transition-all duration-300 will-change-transform hover:scale-150"
+>
+	<span class="sr-only">Abrir Menú Principal</span>
+	<svg
+		class="size-6"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		stroke="currentColor"
+		aria-hidden="true"
+		data-slot="icon"
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+	</svg>
+</button>
+
+<!-- Dropdown menu -->
+<div
+	id="dropdown"
+	class="md:hidden z-10 hidden divide-y divide-gray-600 rounded-lg shadow-sm w-44 dark:bg-contrast"
+>
+	<ul
+		class="py-2 text-sm text-gray-700 dark:text-gray-200"
+		aria-labelledby="dropdownDefaultButton"
+	>
+		<li>
+			<a
+			data-astro-reload
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				href="/">Inicio</a
+			>
+		</li>
+		<li>
+			<a
+			data-astro-reload
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				href="/servicios/">Servicios</a
+			>
+		</li>
+		<li>
+			<a
+			data-astro-reload
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				href="/obras/">Obras</a
+			>
+		</li>
+		<li>
+			<a
+			data-astro-reload
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				href="/nosotros/">Sobre nosotros</a
+			>
+		</li>
+		<li>
+			<a
+			data-astro-reload
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				href="/contacto">Contacto</a
+			>
+		</li>
+	</ul>
+</div>

@@ -9,29 +9,23 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-	<div
-		class="mx-auto flex items-center justify-center "
-	>
-		<div class="md:grid md:grid-cols-6 md:grid-rows-8">
-			<div class="md:row-span-3 md:col-span-4"><Obras /></div>
-			<div class=" md:col-span-2 md:row-span-4 md:col-start-5">
+	<div class="mx-auto flex  justify-center">
+		<div class="md:grid md:grid-cols-6 md:grid-rows-3">
+			<div class="md:row-span-1 md:col-span-4"><Obras /></div>
+			<div class="md:col-span-2 md:row-span-2 md:col-start-5">
 				<Newsletter />
 			</div>
-			<div class="md:col-span-4 md:row-span-2 md:row-start-4">
+			<div class="md:col-span-4 md:row-span-1 md:row-start-3">
 				<Info />
 			</div>
-			<div
-				class="md:col-span-2 md:row-span-3 md:col-start-1 md:row-start-6"
-			>
+			<!-- <div class="md:col-span-4 md:row-span-2 md:row-start-6">
 				<Nosotros />
-			</div>
-			<div
-				class="md:col-span-2 md:row-span-3 md:col-start-3 md:row-start-6"
-			>
+			</div> -->
+			<div class="md:col-span-4 md:row-span-1">
 				<Servicios />
 			</div>
 			<div
-				class=" md:col-span-2 md:row-span-4 md:col-start-5 md:row-start-5"
+				class="md:col-span-2 md:row-span-1 md:col-start-5 md:row-start-3"
 			>
 				<Contacto />
 			</div>
