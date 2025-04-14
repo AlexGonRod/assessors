@@ -2,14 +2,14 @@
 import LayoutPages from "@/layouts/LayoutPages.astro";
 
 import metadata from "../const/meta.json";
-const { mail, address, tel, name } = metadata;
+const { name } = metadata;
 ---
 
 <LayoutPages title="Nosotros" description=`Conoce más sobre ${name} `>
 	<h1
-		class="text-primary-500 text-right border-primary-500 border-b font-bold text-3xl"
+		class="text-primary-500 text-right border-primary-500 border-b font-bold text-2xl md:text-3xl"
 	>
-		{name} , expertos en rehabilitacion y reformas
+		{name}, expertos en rehabilitacion y reformas
 	</h1>
 	<h2 class="text-3xl font-semibold my-10 text-center">
 		Creemos en lo que hacemos
