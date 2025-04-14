@@ -4,7 +4,6 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/karla";
-import { ClientRouter } from "astro:transitions";
 
 import metadata from "../const/meta.json";
 const { name } = metadata;
@@ -21,12 +20,10 @@ const { name } = metadata;
 			content=`${name}  es una empresa dedicada tanto a la rehabilitacion como a la obra nueva. Mas de 10 años nos avalan, con proyectos y clientes satisfechos.`$
 		/>
 		<title>{name}</title>
-		<ClientRouter />
 	</head>
 	<body class="">
 		<Header />
 		<slot />
 		<Footer />
-		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 	</body>
 </html>
